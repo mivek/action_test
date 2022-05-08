@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
 
       - name: Update readme
         run: echo "DATE = $(date)" >> README.md
